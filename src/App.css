@@ -8,11 +8,27 @@ body {
   margin-top: 100px;
   color: #fff;
 }
-.app  .title-h1{
-  text-align: center;
-}
-/* todoField */
 
+/* todoField */
+.todo-wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo-wrapper .todo{
+  padding:10px;
+  margin: 10px;
+  border:1px solid #fff;
+  max-width: 250px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+
+
+}
 .todoField {
   display: flex;
   align-items: center;

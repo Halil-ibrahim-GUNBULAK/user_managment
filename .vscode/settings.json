@@ -1,4 +1,38 @@
 {
-   
- 
-}
+    "workbench.colorTheme": "Default Dark+",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+  
+    "workbench.iconTheme": "material-icon-theme",
+  
+    "editor.fontSize": 16,
+    "editor.wordWrap":"wordWrapColumn",
+  
+    "workbench.editor.defaultBinaryEditor": "default",
+    "debug.javascript.autoAttachFilter": "always",
+    "debug.javascript.codelens.npmScripts": "all",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+       "source.fixAll":true,
+       "source.sortImports":true,
+        "source.fixAll.eslint": true
+    }
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "auto-close-tag.enable": true,
+    "auto-rename-tag.activationOnLanguage": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
+    
+    "workbench.editor.closeOnFileDelete": true,
+    "extensions.experimental.deferredStartupFinishedActivation": true,
+    "prettier.bracketSameLine": true,
+    "files.autoSave": "onWindowChange",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "smooth"
+  }
+  

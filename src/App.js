@@ -1,11 +1,14 @@
 
-import './App.css';
+
 import HomePage from './pages/HomePage';
+import './App.css';
+import TodoPage from './pages/TodoPage';
 
 function App() {
+  
   return (
-    <div className="App">
-      <HomePage/>
+    <div className="app">
+     <TodoPage/>
     </div>
   );
 }

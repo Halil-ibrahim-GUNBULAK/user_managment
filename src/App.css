@@ -1,38 +1,69 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: cornflowerblue;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  color: #fff;
+}
+.app  .title-h1{
   text-align: center;
 }
+/* todoField */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoField {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
+}
+.todoField .todoField__btn {
+  color: #fff;
+  background-color: coral;
+  border: 0;
+  height: 35px;
+  cursor: pointer;
+}
+.todoField .todoField__input {
+  height: 35px;
+  padding: 0 10px;
+  border: 0;
+  outline: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* todos */
+.todos {
+  list-style-type: none;
+  padding: 0;
+  max-height: 350px;
+  overflow-y: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todos::-webkit-scrollbar {
+  width: 5px;
+  background-color: coral;
+}
+.todos::-webkit-scrollbar-thumb {
+  background-color: #eee;
+}
+.todos .todos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.todos .todos__text {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.todos .todos__text.todos__text--done {
+  text-decoration: line-through;
+}
+.todos .todos__buttons button {
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
 }

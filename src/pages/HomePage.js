@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, NavbarBrand } from 'reactstrap'
-import UserListComponent from '../components/UserListComponent'
+import UserListComponent from '../userManagment/UserListComponent'
+import Counter from '../userManagment/Counter'
 import { ToastContainer, toast } from 'react-toastify';
 const { v4: uuidv4 } = require('uuid');
 
@@ -100,6 +101,7 @@ export default class HomePage extends Component {
                         React - Intro
                     </NavbarBrand>
                 </Navbar>
+                <Counter/>
                 <UserListComponent users={this.state.users} addUser={this.addUser}
                  deleteUser={this.deleteUser} editUser={this.editUser}/>
                 <ToastContainer/>

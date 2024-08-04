@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Table } from 'reactstrap'
 import { Alert } from 'reactstrap'
-import  FormComponent  from '../components/FormComponent'
+import  FormComponent  from '../userManagment/FormComponent'
 
 export default class UserListComponent extends Component {
     constructor(props){

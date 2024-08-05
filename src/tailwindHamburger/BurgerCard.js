@@ -14,7 +14,7 @@ const BurgerCard = ({ item }) => {
           src={require(item.images[1])}
         />
       </div>
-      <h5>{item.desc}</h5>
+      <h5 className="whitespace-nowrap">{item.desc}</h5>
     </div>
   );
 };

@@ -8,9 +8,10 @@ import ReduxCounterPage from "./pages/ReduxCounterPage";
 function App() {
   return (
     <div className="text-center text-pretty">
-      <TailwindHamburgerPage />
+      Hi There
       {/* <ReduxCounterPage/> 
-       <AxiosPage /> */}
+        <AxiosPage />
+        <TailwindHamburgerPage /> */}
     </div>
   );
 }

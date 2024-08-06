@@ -13,6 +13,22 @@ body {
   place-items: center;
   
 }
+.btn {
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+  /* color: white; */
+}
+.btn.disabled {
+  opacity: .65;
+  pointer-events: none;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:active {
+  color: green; 
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

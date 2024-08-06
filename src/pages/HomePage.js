@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand } from "reactstrap";
 import UserListComponent from "../userManagment/UserListComponent";
 import Counter from "../userManagment/Counter";
 import { ToastContainer, toast } from "react-toastify";
+import { jwtDecode } from "jwt-decode";
 const { v4: uuidv4 } = require("uuid");
 
 export default class HomePage extends Component {
@@ -35,10 +36,17 @@ export default class HomePage extends Component {
           username: "mustafaG",
         },
       ],
+
+      userInfo: {},
     };
+
     this.addUser = this.addUser.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
     this.editUser = this.editUser.bind(this);
+    this.findToken = this.findToken.bind(this);
+  }
+  componentDidMount() {
+    this.findToken();
   }
   deleteUser = (user_object) => {
     if (user_object) {
@@ -48,6 +56,25 @@ export default class HomePage extends Component {
 
       this.setState({ users });
       toast(`"${user_object.name}" adlı kullanıcısı silindi`);
+    }
+  };
+  findToken = () => {
+    const userToken = localStorage.getItem("token");
+    if (userToken) {
+      try {
+        const data = jwtDecode(userToken);
+        console.log("Decoded token data:", data);
+
+        if (data && data.user) {
+          this.setState({ userInfo: data.user });
+        } else {
+          console.error("Decoded token does not contain user information");
+        }
+      } catch (error) {
+        console.error("Error decoding token:", error);
+      }
+    } else {
+      console.error("No token found in localStorage");
     }
   };
   addUser = (name, surname, username) => {
@@ -91,6 +118,10 @@ export default class HomePage extends Component {
         <Navbar className="my-2" color="dark" dark>
           <NavbarBrand href="/">React - Intro</NavbarBrand>
         </Navbar>
+        <div>
+          <h3>Name: {this.state.userInfo.fullName}</h3>
+          <h3>Email: {this.state.userInfo.email}</h3>
+        </div>
         <Counter />
         <UserListComponent
           users={this.state.users}

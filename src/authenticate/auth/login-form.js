@@ -21,7 +21,7 @@ const LoginForm = () => {
       );
       localStorage.setItem("token", res?.data.token);
 
-      navigation("/home");
+      navigation("/random_user");
       console.log("Login Yapıldı", res?.data.token);
     } catch (error) {
       console.log("error:", error);
